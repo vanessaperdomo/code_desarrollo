@@ -1,0 +1,114 @@
+databaseChangeLog:
+
+  # 1. categoria
+  - changeSet:
+      id: 00001_tables
+      author: p.laurav2@gmail.com
+      context: farmacia
+      labels: HU-01
+      comment: Create table categoria
+      changes:
+        - tagDatabase:
+            tag: v1.0.0
+        - sqlFile:
+            path: 01_tables/0001_create_table_categoria.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0001_create_table_categoria.sql
+
+
+  # 2. proveedor
+  - changeSet:
+      id: 00002_tables
+      author: p.laurav2@gmail.com
+      context: farmacia
+      labels: HU-01
+      comment: Create table proveedor
+      changes:
+        - tagDatabase:
+            tag: v1.0.1
+        - sqlFile:
+            path: 01_tables/0002_create_table_proveedor.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0002_create_table_proveedor.sql
+
+
+  # 3. medicamento
+  - changeSet:
+      id: 00003_tables
+      author: p.laurav2@gmail.com
+      context: farmacia
+      labels: HU-01
+      comment: Create table medicamento
+      changes:
+        - tagDatabase:
+            tag: v1.0.2
+        - sqlFile:
+            path: 01_tables/0003_create_table_medicamento.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0003_create_table_medicamento.sql
+
+
+  # 4. cliente
+  - changeSet:
+      id: 00004_tables
+      author: p.laurav2@gmail.com
+      context: farmacia
+      labels: HU-01
+      comment: Create table cliente
+      changes:
+        - tagDatabase:
+            tag: v1.0.3
+        - sqlFile:
+            path: 01_tables/0004_create_table_cliente.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0004_create_table_cliente.sql
+
+
+  # 5. venta
+  - changeSet:
+      id: 00005_tables
+      author: p.laurav2@gmail.com
+      context: farmacia
+      labels: HU-01
+      comment: Create table venta
+      changes:
+        - tagDatabase:
+            tag: v1.0.4
+        - sqlFile:
+            path: 01_tables/0005_create_table_venta.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0005_create_table_venta.sql
+
+
+  # 6. detalle_venta
+  - changeSet:
+      id: 00006_tables
+      author: p.laurav2@gmail.com
+      context: farmacia
+      labels: HU-01
+      comment: Create table detalle_venta
+      changes:
+        - tagDatabase:
+            tag: v1.0.5
+        - sqlFile:
+            path: 01_tables/0006_create_table_detalle_venta.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0006_create_table_detalle_venta.sql
